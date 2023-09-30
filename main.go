@@ -3,21 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	message := "Hello, World!"
+	message, _ := enterTheClub(16)
 	fmt.Println(message)
+	// fmt.Println(entered)
+}
 
-	var number int = 16
-	var mess string = "End of program"
-	var num float32 = 23.582
-	var a rune = 'S'
-	x := 15
-	y := 6
-
-	fmt.Println(number)
-	fmt.Println(x + y)
-	fmt.Println(number - y)
-	fmt.Println(num * float32(y))
-	fmt.Println(x / y)
-	fmt.Println(a)
-	fmt.Println(mess)
+func enterTheClub(age int) (string, bool) {
+	if age >= 18 {
+		return "Please Enter", true
+	} else {
+		return "Entrance closed", false
+	}
 }
